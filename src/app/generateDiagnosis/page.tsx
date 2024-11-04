@@ -28,7 +28,7 @@ export default function GenerateDiagnosis() {
 
       <Layout>
         <Link href={"/"}>
-          <IoIosArrowBack size={40} color="black" className="mt-8 mb-4"/>
+          <IoIosArrowBack size={40} color="black" className="mt-8 mb-4" />
         </Link>
 
         <h1 className="text-3xl font-semibold text-cyan-500 mb-1">Gerar Diagnóstico</h1>
@@ -46,7 +46,7 @@ export default function GenerateDiagnosis() {
           />
 
           <Link href={"/"}>
-            <FaSearch size={45} color="black" className="bg-cyan-500 p-3 border-black border-2 rounded-md "/>
+            <FaSearch size={45} color="black" className="bg-cyan-500 p-3 border-black border-2 rounded-md " />
           </Link>
         </form>
 

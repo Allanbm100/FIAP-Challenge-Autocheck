@@ -46,7 +46,7 @@ export default function Login() {
 
       <Layout>
         <Link href={"/"}>
-          <IoIosArrowBack size={40} color="black" className="mt-8 mb-4"/>
+          <IoIosArrowBack size={40} color="black" className="mt-8 mb-4" />
         </Link>
 
         <h1 className="text-3xl font-semibold text-cyan-500 mb-0">Acessar Conta</h1>
