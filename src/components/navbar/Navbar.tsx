@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FaRegUserCircle } from "react-icons/fa";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useUserContext } from "../../context/UserContext";
+import { useUserContext } from "../../context/userContext";
 
 interface NavbarProps {
   type: string;
