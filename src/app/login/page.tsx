@@ -1,4 +1,3 @@
-// src/pages/login.tsx
 "use client";
 
 import { useRouter } from "next/navigation";
@@ -7,7 +6,7 @@ import { Navbar } from "../../components/navbar/Navbar";
 import { Layout } from "../../components/layout/Layout";
 import { IoIosArrowBack } from "react-icons/io";
 import { useState } from "react";
-import { useUserContext } from "../../context/UserContext";
+import { useUserContext } from "../../context/userContext";
 import Link from "next/link";
 
 export default function Login() {
