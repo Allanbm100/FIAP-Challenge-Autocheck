@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Footer } from "../components/footer/Footer";
 import { Navbar } from "../components/navbar/Navbar";
 import { FaGithub } from "react-icons/fa";
@@ -11,8 +12,16 @@ import fotoCaio from "../assets/images/caio.png";
 import fotoLevi from "../assets/images/levi.png";
 import backgroundImage from "../assets/images/imagem-section-principal.jpg";
 import Image from "next/image"
+import Link from "next/link";
 
 export default function Home() {
+  const [typeNavbar, setTypeNavbar] = useState<'logged' | 'unlogged'>('unlogged');
+
+  useEffect(() => {
+    const logged = false;
+    setTypeNavbar(logged ? 'logged' : 'unlogged');
+  }, []);
+
   return (
     <>
       <Navbar type={typeNavbar} />
