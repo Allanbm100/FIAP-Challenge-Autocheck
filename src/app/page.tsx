@@ -1,113 +1,131 @@
-import Image from 'next/image'
+import { Footer } from "../components/footer/Footer";
+import { Navbar } from "../components/navbar/Navbar";
+import { FaGithub } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoSend } from "react-icons/io5";
+import imgServico1 from "../assets/images/imagem-servico1.jpg";
+import imgServico2 from "../assets/images/imagem-servico2.jpg";
+import imgServico3 from "../assets/images/imagem-servico3.jpg";
+import fotoAllan from "../assets/images/allan.png";
+import fotoCaio from "../assets/images/caio.png";
+import fotoLevi from "../assets/images/levi.png";
+import backgroundImage from "../assets/images/imagem-section-principal.jpg";
+import Image from "next/image"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Navbar type={typeNavbar} />
+
+      <section className="relative h-[538px] w-screen">
+        <div className="absolute inset-0 z-[-1]">
+          <Image
+            src={backgroundImage}
+            alt="Background"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            style={{ filter: 'hue-rotate(-5deg) brightness(0.5)' }}
+            priority
+          />
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+        <div className="flex flex-col justify-center items-center gap-2 pt-[160px]">
+          <h1 className="text-5xl font-bold text-center text-white uppercase">Seja</h1>
+          <h1 className="text-5xl font-bold text-center text-white uppercase">Bem-Vindo</h1>
+          <p className="text-lg font-light text-center mb-5 text-white w-[350px]">
+            Conheça <b>AutoCheck</b>, o seu novo mecânico de bolso!
           </p>
-        </a>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <section className="w-full flex flex-col items-center gap-5 py-12 bg-white">
+        <h2 className="text-center text-2xl font-semibold text-[#0f5a6c] mt-10">Nosso Serviços</h2>
+        <p className="text-center text-lg font-normal text-[#0f5a6c] w-[80vw]">
+          Oferecemos diagnósticos precisos de veículos e assistência completa, facilitando orçamentos e
+          agendamentos, visando eficiência e a melhor experiência para atender as necessidades do cliente de
+          ponta a ponta.
+        </p>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+        <div className="flex sm:flex-wrap md:flex-nowrap justify-center gap-5 mx-32 mb-10">
+          {[imgServico1, imgServico2, imgServico3].map((img, index) => (
+            <article key={index} className="flex flex-col items-center gap-2">
+              <Image
+                className="rounded-lg filter hue-rotate-[-5deg] brightness-50 transition duration-500 hover:brightness-75"
+                src={img}
+                alt={`Imagem ilustrativa do serviço ${index + 1}`}
+              />
+              <div className="text-center text-[#0f5a6c]">
+                <h3 className="text-xl font-bold">{['Assistência Inteligente', 'Diagnóstico', 'Manutenção'][index]}</h3>
+                <span className="text-base font-normal">{['Assistência fácil e ágil via chat bot', 'Diagnóstico completo do seu veículo', 'Direcionamento para o CAPS mais próximo'][index]}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <section className="w-full flex flex-col items-center gap-5 py-12 bg-[#EFF4FF]">
+        <h2 className="text-center text-2xl font-semibold text-[#0f5a6c] mt-10">Time AutoCheck</h2>
+        <p className="text-center text-lg font-normal text-[#0f5a6c] w-[80vw]">
+          Somos o time que idealizou e construiu a solução <b>AutoCheck</b> para ser integrada com a <b>Porto Seguro</b>. Alunos da FIAP, da turma 1TDSPX.
+        </p>
+
+        <div className="flex justify-center text-center gap-10 mb-10 flex-wrap">
+          {[{ name: "Allan Brito", rm: "RM558948", img: fotoAllan, github: "https://github.com/Allanbm100" },
+          { name: "Caio Liang", rm: "RM558868", img: fotoCaio, github: "https://github.com/CaioLiang" },
+          { name: "Levi Magni", rm: "RM98276", img: fotoLevi, github: "https://github.com/levmn" }].map((member, index) => (
+            <article key={index} className="flex flex-col items-center gap-2">
+              <Image src={member.img} alt={`Foto do ${member.name}`} className="border-4 border-[#3AC0E1] rounded-full w-60 h-60" />
+              <h3 className="text-xl font-bold text-[#0f5a6c]">{member.name}</h3>
+              <span className="text-base font-normal text-[#0f5a6c]">{member.rm}</span>
+              <Link href={member.github} target="_blank" rel="noopener noreferrer">
+                <FaGithub color="#0f5a6c" size="25px" />
+              </Link>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="w-full flex flex-col items-center gap-5 py-12 bg-white">
+        <h2 className="text-xl font-semibold text-[#0f5a6c] text-center mt-10">Fale Conosco!</h2>
+        <p className="w-[80vw] text-lg text-[#0f5a6c] text-center">Entre em contato conosco para tirar dúvidas, dar sugestões ou solicitar um orçamento.</p>
+
+        <div className="flex flex-col md:flex-row justify-center gap-8">
+          <div className="flex flex-col items-start">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1159349301374!2d-46.657424174484454!3d-23.56427930685303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7dc4e1e39%3A0x9cfd59970ac3b457!2sAv.%20Paulista%2C%201106%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-914!5e0!3m2!1sen!2sbr!4v1716230946303!5m2!1sen!2sbr"
+              width="600"
+              height="300"
+              className="border border-[#0f5a6c] rounded-md"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+            <div className="flex flex-col text-[#0f5a6c] text-base mt-2 gap-2">
+              <span className="flex items-center">
+                <FaLocationDot size="20px" color="#0f5a6c" />
+                <span className="ml-2">Av. Paulista, 1106 - 7º Andar - Bela Vista, São Paulo - SP, 01311-000</span>
+              </span>
+              <span>Telefone: (11) 4002-8922</span>
+              <span>E-Mail: autocheckcontato@fiap.com.br</span>
+            </div>
+          </div>
+
+          <form action="" method="post" className="flex flex-col justify-center w-[30vw]">
+            <input type="text" name="nome" id="nome" placeholder="Nome" className="font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md" />
+            <input type="email" name="email" id="email" placeholder="E-mail" className="font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md" />
+            <input type="text" name="assunto" id="assunto" placeholder="Assunto" className="font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md" />
+            <textarea name="mensagem" id="mensagem" placeholder="Mensagem" className="h-48 font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md"></textarea>
+            <button type="submit" className="flex items-center justify-center gap-2 p-2 bg-[#0f5a6c] text-white rounded-md">
+              <span>
+                <IoSend size="20px" />
+              </span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
 }
