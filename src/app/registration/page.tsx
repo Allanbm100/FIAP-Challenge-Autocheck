@@ -7,10 +7,56 @@ import { Navbar } from "../../components/navbar/Navbar";
 import { IoIosArrowBack } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { Button } from "../../components/button/Button";
-import { useUserContext } from "../../context/UserContext";
+import { useUserContext } from "../../context/userContext";
 import Link from "next/link";
 
 export default function Registration() {
+    const router = useRouter();
+    const { isLoggedIn, login } = useUserContext();
+
+    const [CPF, setCPF] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+
+    useEffect(() => {
+        if (isLoggedIn) {
+            alert("Usuário já está logado");
+            router.push("/");
+        }
+    }, [isLoggedIn, router]);
+
+    const validarCPF = (input: string): boolean => {
+        const regexCPF = /^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$/;
+        return regexCPF.test(input);
+    };
+
+    const validarSenha = (senha: string): boolean => senha.length >= 8;
+
+    const confirmaSenha = (senha: string, confirmarSenha: string): boolean => senha === confirmarSenha;
+
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+
+        if (!validarCPF(CPF)) {
+            alert("Por favor, insira um CPF válido!");
+            return;
+        }
+
+        if (!validarSenha(password)) {
+            alert("A senha deve ter no mínimo 8 caracteres!");
+            return;
+        }
+
+        if (!confirmaSenha(password, confirmPassword)) {
+            alert("As senhas não coincidem!");
+            return;
+        }
+
+        alert("Cadastro realizado com sucesso! Agora cadastre um veículo.");
+        login(CPF);
+        router.push("/cadastrar-veiculo");
+    };
+
     return (
         <>
             <Navbar type="unlogged" />
