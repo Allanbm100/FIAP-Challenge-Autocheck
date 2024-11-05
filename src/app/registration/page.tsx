@@ -7,8 +7,8 @@ import { Navbar } from "../../components/navbar/Navbar";
 import { IoIosArrowBack } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { Button } from "../../components/button/Button";
-import { useUserContext } from "../../context/userContext";
 import Link from "next/link";
+import { useUserContext } from "@/context/UserContext";
 
 export default function Registration() {
     const router = useRouter();
