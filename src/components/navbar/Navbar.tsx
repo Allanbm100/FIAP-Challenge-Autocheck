@@ -1,11 +1,10 @@
-// src/components/navbar/Navbar.tsx
 import Logo from "../../assets/images/autocheck-azul.png";
 import Link from "next/link";
 import Image from "next/image";
 import { FaRegUserCircle } from "react-icons/fa";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useUserContext } from "../../context/userContext";
+import { useUserContext } from "@/context/UserContext";
 
 interface NavbarProps {
   type: string;
