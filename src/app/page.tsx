@@ -101,10 +101,10 @@ export default function Home() {
         <p className="w-[80vw] text-lg text-[#0f5a6c] text-center">Entre em contato conosco para tirar dúvidas, dar sugestões ou solicitar um orçamento.</p>
 
         <div className="flex flex-col md:flex-row justify-center gap-8">
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start w-full md:w-1/2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1159349301374!2d-46.657424174484454!3d-23.56427930685303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7dc4e1e39%3A0x9cfd59970ac3b457!2sAv.%20Paulista%2C%201106%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-914!5e0!3m2!1sen!2sbr!4v1716230946303!5m2!1sen!2sbr"
-              width="600"
+              width="100%"
               height="300"
               className="border border-[#0f5a6c] rounded-md"
               allowFullScreen
@@ -122,11 +122,11 @@ export default function Home() {
             </div>
           </div>
 
-          <form action="" method="post" className="flex flex-col justify-center w-[30vw]">
-            <input type="text" name="nome" id="nome" placeholder="Nome" className="font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md" />
-            <input type="email" name="email" id="email" placeholder="E-mail" className="font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md" />
-            <input type="text" name="assunto" id="assunto" placeholder="Assunto" className="font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md" />
-            <textarea name="mensagem" id="mensagem" placeholder="Mensagem" className="h-48 font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md"></textarea>
+          <form action="" method="post" className="flex flex-col justify-center w-full md:w-96">
+            <input type="text" name="nome" id="nome" placeholder="Nome" className="font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md w-full" />
+            <input type="email" name="email" id="email" placeholder="E-mail" className="font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md w-full" />
+            <input type="text" name="assunto" id="assunto" placeholder="Assunto" className="font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md w-full" />
+            <textarea name="mensagem" id="mensagem" placeholder="Mensagem" className="h-48 font-sans text-sm mb-4 p-2 border border-[#0f5a6c] rounded-md w-full"></textarea>
             <button type="submit" className="flex items-center justify-center gap-2 p-2 bg-[#0f5a6c] text-white rounded-md">
               <span>
                 <IoSend size="20px" />
@@ -134,6 +134,7 @@ export default function Home() {
             </button>
           </form>
         </div>
+
       </section>
 
       <Footer />
