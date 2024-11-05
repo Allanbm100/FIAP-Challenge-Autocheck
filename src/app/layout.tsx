@@ -21,6 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
+      <head>
+        <link rel="icon" type="image/png" href='./favicon.png' />
+      </head>
+
       <UserContextProvider>
         <body className={rubik.className}>{children}</body>
       </UserContextProvider>
